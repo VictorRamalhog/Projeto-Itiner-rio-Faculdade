@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidade LGBT+</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        /* Estilo do corpo */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000; /* Cor de fundo suave */
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Cabeçalho */
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 35px;
+        }
+
+        header h3 {
+            color: #ffffff; /* Rosa vibrante */
+        }
+
+        
+        header h1 a {
+            font-size: 24px;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .sectionbody {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #333;
+            padding: 20px;
+        }
+        
+        #menu {
+            padding: 10px;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: all 1.0s ease;
+            -moz-border-radius:30px;
+            -webkit-border-radius:30px;
+            border-radius: 30px;
+            width:100%;
+            height:auto;
+            margin-left: auto ;
+            margin-right: auto ;
+            padding:10px;
+            display: inline-block;
+            background-color: #6200ea;
+        }
+
+        .sectionconteudo {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            min-height: 100vh;
+            color: #333;
+            padding: 20px;
+        }
+
+        .sectionconteudo img {
+            background-color: red;
+            position:sticky;
+            z-index: -1;
+        }
+
+        .linhasbox {
+            width: 100%;
+            position: fixed;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            z-index: -1;
+        }
+
+
+        .linhasbox img {
+            padding: 10vh;
+            flex-basis: 30%;
+            opacity: 0.2;
+        }
+
+        /* Menu de navegação */
+        nav#menu {
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        nav#menu ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav#menu ul li {
+            margin: 0 10px;
+        }
+
+        nav#menu ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background 0.3s;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 1.0s ease;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            -webkit-box-shadow: 0px 0px 30px 0px rgba(255, 0, 170, 0.67);
+            -moz-box-shadow:    0px 0px 30px 0px rgba(255, 0, 212, 0.67);
+            box-shadow:         0px 0px 30px 0px rgba(255, 0, 242, 0.67);
+        }
+
+        nav#menu ul li a:hover {
+            background-color: #ff4081; /* Rosa quando o mouse passa */
+        }
+
+        /* Área de Comunidades */
+        #comunidades {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        #comunidades h2 {
+            color: #6200ea;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        #comunidades p {
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        button {
+            background-color: #ff4081;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #e91e63; /* Rosa mais escuro ao passar o mouse */
+        }
+
+        #form-comunidade {
+            margin-top: 20px;
+            background-color: #f8eaf6;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        #form-comunidade h3 {
+            color: #6200ea;
+            margin-bottom: 10px;
+        }
+
+        #form-comunidade label {
+            display: block;
+            margin: 5px 0;
+            font-weight: bold;
+            color: #333;
+        }
+
+        #form-comunidade input, #form-comunidade textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Lista de Comunidades */
+        #lista-comunidades {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #lista-comunidades li {
+            background-color: #e1bee7; /* Roxo claro */
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Chat */
+        #chat {
+            background-color: #ffffff00;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        #chat h2 {
+            background-color: #ffffff;
+            justify-self: center;
+            padding: 6px;
+            border: 1px solid #4e109f;
+            border-radius: 25px;
+            color: #4e109f;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+        
+        .subtitulochat {
+            color: #c4c3c3;
+            padding: 2px;
+        }
+        #chat-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #chat-box {
+            height: 200px;
+            overflow-y: auto;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        #chat-form {
+            display: flex;
+        }
+
+        #chat-form input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px 0 0 5px;
+        }
+
+        #chat-form button {
+            border-radius: 0 5px 5px 0;
+            background-color: #ff4081;
+        }
+
+        /* Área de Suporte */
+        #suporte {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #suporte h2 {
+            color: #6200ea;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+        }
+
+        .sectionfototer {
+            border-top: 1px solid #2f2f2f;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+            min-height: 10vh;
+            color: #333;
+            margin-top: 20px;
+            background-color: #000000;
+        }
+
+        .sectionfototer footer {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+            min-height: 10vh;
+            color: #333;
+        }
+
+        .box-footer {
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            justify-content:  space-evenly;
+
+        }
+
+        .sectionfototer footer ul li a:hover {
+            transition: 0.2s;
+            color: #cacaca;
+        }
+
+        .sectionfototer img {
+            max-width: 20%;
+            display: flex;
+        }
+
+        .box-footer{
+            margin-right: 20px;
+        }
+
+        .box-footer h1 a {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<section class="sectionbody">
+    <section class="linhasbox">
+        <img src="images/linha-esquerda.svg" alt="">
+        <img src="images/linha-esquerda.svg" alt="">
+        <img src="images/linha-esquerda.svg" alt="">
+        <img src="images/linha-esquerda.svg" alt="">
+        <img src="images/linha-esquerda.svg" alt="">
+        <img src="images/linha-esquerda.svg" alt="">
+    </section>
+    <body>
+            <!-- Cabeçalho -->
+            <header>
+                <a href="https://pride.google/" target="_blank"><img src="images/coracao.svg"></a>
+                <h1><a href="index.html">I N F O&nbsp;&nbsp;_&nbsp;&nbsp;P R I D E</a></h1>
+                <h3>Bem-vindo(a ) à Comunidade LGBT+</h3>
+            </header>
+
+            <!-- Menu de navegação -->
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html" target="_self">Página inicial</a></li>
+                    <li><a href="calendario.html" target="_self">Calendário</a></li>
+                    <li><a href="comunidade.html" target="_self">Comunidade</a></li>
+                    <li><a href="denuncias.html" target="_self">SAC</a></li>
+                </ul>
+            </nav>
+
+
+        <section class="sectionconteudo">
+            <!-- Área de Comunidades -->
+            <section id="comunidades">
+                <h2>Comunidades</h2>
+                <p>Participe de grupos de interesse e encontre pessoas com experiências e interesses semelhantes!</p>
+                <button id="criar-comunidade-btn">Criar Comunidade</button>
+                
+                <!-- Formulário de Criação de Comunidade -->
+                <div id="form-comunidade" style="display: none;">
+                    <h3>Nova Comunidade</h3>
+                    <form>
+                        <label for="nome-comunidade">Nome da Comunidade:</label>
+                        <input type="text" id="nome-comunidade" name="nome-comunidade" required>
+                        
+                        <label for="descricao-comunidade">Descrição:</label>
+                        <textarea id="descricao-comunidade" name="descricao-comunidade" rows="3"></textarea>
+                        
+                        <button type="submit">Criar</button>
+                    </form>
+                </div>
+
+                <!-- Lista de Comunidades -->
+                <ul id="lista-comunidades">
+                    <li>Comunidade de Jovens LGBT+</li>
+                    <li>Apoio Psicológico</li>
+                    <li>Artes e Cultura</li>
+                </ul>
+            </section>
+
+            <!-- Área de Chat -->
+            <section id="chat">
+                <h2>Chat ao Vivo</h2>
+                <p class="subtitulochat">Converse em tempo real com outros membros da comunidade!</p>
+                
+                <div id="chat-container">
+                    <div id="chat-box">
+                        <!-- As mensagens serão exibidas aqui -->
+                    </div>
+                    <form id="chat-form">
+                        <input type="text" id="mensagem" name="mensagem" placeholder="Digite sua mensagem..." required>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Área de Suporte -->
+            <section id="suporte">
+                <h2>Precisa de ajuda?</h2>
+                <p>Nossa equipe está disponível para oferecer suporte emocional e informações sobre nossos serviços.</p>
+            </section>
+        </section>
+        <section class="sectionfototer">
+            <footer>
+                <div class="box-footer">
+                    <h1><a href="index.html">I N F O&nbsp;&nbsp;_&nbsp;&nbsp;P R I D E</a></h1>
+                    <img id="imagefoter" src="images/diversidadefooter.jpg">
+                </div>    
+            </footer>
+        </section>
+
+        <!-- Scripts -->
+        <script>
+            document.getElementById('criar-comunidade-btn').addEventListener('click', function() {
+                const form = document.getElementById('form-comunidade');
+                form.style.display = form.style.display === 'none' ? 'block' : 'none';
+            });
+
+            document.getElementById('chat-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const mensagem = document.getElementById('mensagem').value;
+                const chatBox = document.getElementById('chat-box');
+
+                const novaMensagem = document.createElement('p');
+                novaMensagem.textContent = mensagem;
+                chatBox.appendChild(novaMensagem);
+
+                document.getElementById('mensagem').value = '';
+            });
+        </script>
+    </body>
+</section>
+</html>

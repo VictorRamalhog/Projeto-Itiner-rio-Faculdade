@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icone-site.svg">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="cabecalho.css">
+    <link rel="stylesheet" href="quebra.css">
+    <link rel="stylesheet" href="ambiente.css">
+    <link rel="stylesheet" href="historias.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="eventos.css">
+    <link rel="stylesheet" href="noticias.css">
+    <link rel="stylesheet" href="responsivo.css">
+    <link rel="stylesheet" href="educacao.css">
+    <title>Formulário de Reporte</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        /* Estilo do corpo */
+        .sectionbody {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #333;
+            padding: 20px;
+        }
+
+        .sectionfototer {
+            border-top: 1px solid #2f2f2f;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+            min-height: 10vh;
+            color: #333;
+            margin-top: 20px;
+            background-color: #000000;
+        }
+
+        .sectionfototer footer {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+            min-height: 10vh;
+            color: #333;
+        }
+
+        .box-footer {
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            justify-content:  space-evenly;
+
+        }
+
+        .sectionfototer footer ul li a:hover {
+            transition: 0.2s;
+            color: #cacaca;
+        }
+
+        .sectionfototer img {
+            max-width: 20%;
+            display: flex;
+        }
+
+        .box-footer{
+            margin-right: 20px;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 35px;
+        }
+
+        /* Menu de navegação */
+        #menu {
+            border: 2px solid #d4d2d6 ;
+            padding: 10px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: all 1.0s ease;
+            -moz-border-radius:30px;
+            -webkit-border-radius:30px;
+            border-radius:30px;
+            border: solid 10px #000;
+            background-color: #6200ea;
+            width:100%;
+            height:auto;
+            margin-left: auto ;
+            margin-right: auto ;
+            padding:10px;
+            display: inline-block;
+        }
+
+        #menu ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 0;
+            margin: 0;
+        }
+
+        #menu ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background 0.3s;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        #menu ul li a:hover {
+            /*background-color: #ff4081;*/
+            transition: all 0.6s ease;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            border-radius: 30px;
+            -webkit-box-shadow: 0px 0px 30px 0px rgba(255, 0, 170, 0.67);
+            -moz-box-shadow:    0px 0px 30px 0px rgba(255, 0, 212, 0.67);
+            box-shadow:         0px 0px 30px 0px rgba(255, 0, 242, 0.67);
+        }
+
+        /* Container do formulário */
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .form-container h2 {
+            color: #6200ea;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-container p {
+            margin-bottom: 10px;
+            font-size: 1em;
+            color: #555;
+        }
+
+        .form-container label {
+            font-weight: bold;
+            color: #555;
+            display: block;
+            margin-top: 15px;
+        }
+
+        .form-container input[type="text"],
+        .form-container textarea,
+        .form-container select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            color: #333;
+        }
+
+        .form-container textarea {
+            resize: vertical;
+        }
+
+        #TipoDeReporte {
+            color: white;
+            background-color: #6200ea;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #6200ea;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            padding: 12px;
+            margin-top: 20px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #45009d;
+        }
+
+        .linhasbox {
+            width: 100%;
+            position: fixed;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            z-index: -1;
+        }
+
+
+        .linhasbox img {
+            padding: 10vh;
+            flex-basis: 30%;
+            opacity: 0.2;
+        }
+    </style>
+</head>
+    <section class="linhasbox">
+        <img src="images/linha-esquerda.svg" alt="">
+        <img src="images/linha-esquerda.svg" alt="">
+        <img src="images/linha-esquerda.svg" alt="">
+        <img class="sumirlinha" src="images/linha-esquerda.svg" alt="">
+        <img class="sumirlinha" src="images/linha-esquerda.svg" alt="">
+        <img class="sumirlinha" src="images/linha-esquerda.svg" alt="">
+    </section>
+    <section class="sectionbody">
+
+        <body>
+            <header>
+                <a href="https://pride.google/" target="_blank"><img src="images/coracao.svg"></a>
+                <h1><a href="index.html">I N F O&nbsp;&nbsp;_&nbsp;&nbsp;P R I D E</a></h1>
+                <h3>Faça sua denúncia aqui</h3  >
+            </header>
+
+            <!-- Menu de navegação -->
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html" target="_self">Página inicial</a></li>
+                    <li><a href="calendario.html" target="_self">Calendário</a></li>
+                    <li><a href="comunidade.html" target="_self">Comunidade</a></li>
+                    <li><a href="denuncias.html" target="_self">SAC</a></li>
+                </ul>
+            </nav>
+        
+            <!-- Formulário -->
+            <div class="form-container">
+                <h2>Formulário de Reporte</h2>
+                <form action="conexao.php" method="POST">
+                    <p>Digite o seu nome:</p>
+                    <input type="text" name="nome" placeholder="Seu nome" required>
+        
+                    <label for="TipoDeReporte">Tipo de reporte:</label>
+                    <select id="TipoDeReporte" name="TipoDeReporte" required>
+                        <option value="" disabled selected>Selecionar</option>
+                        <option value="Racismo">Racismo</option>
+                        <option value="Homofobia">Homofobia</option>
+                        <option value="Gordofobia">Gordofobia</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+        
+                    <label for="OBS">Detalhes do ocorrido:</label>
+                    <textarea name="OBS" id="OBS" rows="4" placeholder="Descreva o ocorrido com o máximo de detalhes" required></textarea>
+        
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+
+
+    </section>
+    <section class="sectionfototer">
+        <footer>
+            <div class="box-footer">
+                <h1><a href="index.html">I N F O&nbsp;&nbsp;_&nbsp;&nbsp;P R I D E</a></h1>
+                <img id="imagefoter" src="images/diversidadefooter.jpg">
+            </div>    
+        </footer>
+    </section>
+</body>
+</html>

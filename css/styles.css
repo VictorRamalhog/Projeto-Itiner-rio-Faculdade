@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+}
+
+a, li {
+  text-decoration: none;
+  list-style: none;
+}
+
+i {
+  color: #000000;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+h1:hover {
+  background: -webkit-linear-gradient(0deg, rgba(255,0,0,1) 0%, rgba(248,115,22,1) 20%, rgba(47,173,76,1) 50%, rgba(44,94,251,1) 80%, rgba(116,22,168,1) 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+.subtilgbt {
+  background: -webkit-linear-gradient(0deg, rgba(255,0,0,1) 0%, rgba(248,115,22,1) 20%, rgba(47,173,76,1) 50%, rgba(44,94,251,1) 80%, rgba(116,22,168,1) 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.inicio {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+  transition: 0.5s;
+}
+
+.todos {
+  display: flex;
+}
+
+.caixa-imagem {
+  margin-right: 20px;
+}
+
+.caixa-todos {
+  margin: 12px;
+}
+
+#titulo {
+  font-size: 1.5rem;
+  cursor: default;
+}
+
+.inicio-titulo {
+  justify-content: space-around;
+}
+
+.icon {
+  height: 5rem;
+  margin-top: 3px;
+}
+
+.caixa-amor {
+  margin-top: 14px;
+}
+
+.amor {
+  font-weight: bold;
+  border:  1px solid #111;
+  border-radius: 10.5px;
+  padding: 7px;
+}
+
+.amor:hover {
+  background: -webkit-linear-gradient(0deg, rgba(255,0,0,1) 0%, #f87316 20%, #2fad4c 50%, #2c5efb 80%, #7416a8 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition-delay: 2s;
+}
+
+.quem-somos {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  padding-top: 3rem;
+  padding-bottom: 8rem;
+  align-items: center;
+  background: linear-gradient(0deg, rgba(28,28,28,1) 0%, rgba(30,120,194,1) 100%);
+}
+
+.img-quem {
+  display: inline-block;
+  width: 350px;
+  max-width: 100%;
+}
+
+.quem-caixa {
+  margin-left: 5rem;
+  width: 50rem;
+}
+
+.quem-titulo {
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-size:1.4em;
+}
+
+.texto-quem {
+  color: #dadada;
+  font-size:1.3em;
+}
+
+.missao {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 7rem;
+  gap: 1rem;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.img-missao {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.missao-caixa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+.missao-titulo {
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.texto {
+  color: #000;
+  width: 19rem;
+}
+
+.nuvens-box {
+  background-color: #1e78c2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 4rem;
+}
+
+.nuvens-box img {
+  margin-right: 2rem;
+}
+
+.proposito-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 3rem;
+  padding-bottom: 8rem;
+  align-items: center;
+  background: #d1d1d1;
+}
+
+.img-proposito {
+  display: inline-block;
+  width: 30rem;
+}
+
+.proposito-caixa {
+  margin-left: 5rem;
+}
+
+.proposito-titulo {
+  color: #000000;
+  margin-bottom: 1rem;
+  font-size:1.2em;
+}
+
+.proposito-texto {
+  color: #131212;
+  font-size:1.1em;
+  width: 25rem;
+}
+
+.global-quem {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.formulario-sec {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 50px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea {
+  color: #000;
+}
+
+.formulario-sec h2 {
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+.formulario-sec p {
+  margin-bottom: 2rem;
+  color: #666;
+  text-align: center;
+}
+
+.formulario-contato {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-contato label {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.formulario-contato button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.formulario-contato button:hover {
+  background-color: #0056b3;
+}

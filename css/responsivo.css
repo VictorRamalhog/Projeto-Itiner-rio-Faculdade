@@ -1,0 +1,174 @@
+
+
+/* Estilos específicos para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav ul li {
+        font-size: 1.2rem;
+    }
+
+    .box-images, .box-images-noticias, .box-images-eventos {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 812px) {
+    header {
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box-footer {
+        display: none   ;
+    }
+
+    .nuvens-box, .img-quem, .img-proposito {
+        display: none;
+    }
+
+    .proposito-box {
+        padding-bottom: 3rem;
+        justify-content: center;
+    }
+
+    .proposito-texto {
+        width: auto;
+    }
+
+    .proposito-caixa {
+        margin: 0.7rem;
+    }
+    
+    .img-quem {
+        display: none;
+    }
+
+    .quem-caixa {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        width: auto;
+        justify-content: center;
+        margin: 0;
+    }
+
+    ul {
+        margin: 0;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ambiente-titulo {
+        color: #000000;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+    }
+    
+    .ambiente-subti {
+      color: #c300ff;
+      background-color: rgb(231, 231, 231);
+      padding: 5px;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+    
+    .ambiente-subti2 {
+      color: #0d9b00;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      font-weight:500;
+    }
+    
+    .ambiente-letra {
+        color: #000;
+        width: auto;
+        font-size: 1.2rem;
+    }
+
+
+
+    .quem-somos {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        width: auto;
+        font-size: 0.9rem;
+        justify-content: center;
+    }
+
+    .evento-subti {
+      font-size: 1.2rem;
+    }
+
+    .img-missao {
+        max-width: 10%px;
+        width: 100%;
+    }
+    
+    .missao {
+        padding: 0.7rem;
+    }
+
+    .evento-subti2 {
+      font-size: 1.2rem;
+    }
+
+    header h1 {
+        font-size: 1rem;
+    }
+
+    header nav ul li {
+        font-size: 1rem;
+        padding: 2rem;
+    }
+
+    .box-images, .box-images-noticias, .box-images-eventos {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    /* Estilos adicionais específicos para seções */
+.inicio, .inicio-noticia, .inicio-historia, .inicio-evento, .inicio-ambiente {
+    flex-direction: column;
+    padding: 2rem 1rem;
+}
+
+.titulo-box {
+    justify-content: center;
+}
+
+.titulo-box h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.amor, .amor-noticia, .amor-historia, .amor-evento, .amor-ambiente {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.ambiente-sec, .evento-sec, .noticia-sec, .historia-sec {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.ambiente-bloco, .evento-bloco, .noticia-bloco, .historia-bloco {
+    width: 90%;
+    max-width: 40rem;
+    padding: 2rem;
+}
+
+.box-images, .box-images-noticias, .box-images-eventos {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+}
+

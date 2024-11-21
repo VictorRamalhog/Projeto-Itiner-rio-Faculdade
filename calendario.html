@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidade LGBT+</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo do corpo */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000; /* Cor de fundo suave */
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Cabeçalho */
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 35px;
+        }
+
+        header h3 {
+            color: #ffffff; /* Rosa vibrante */
+        }
+
+        
+        header h1 a {
+            font-size: 24px;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .sectionbody {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #333;
+            padding: 20px;
+        }
+        
+        #menu {
+            padding: 10px;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: all 1.0s ease;
+            -moz-border-radius:30px;
+            -webkit-border-radius:30px;
+            border-radius: 30px;
+            width:100%;
+            height:auto;
+            margin-left: auto ;
+            margin-right: auto ;
+            padding:10px;
+            display: inline-block;
+            background-color: #6200ea;
+        }
+
+        .sectionconteudo {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            min-height: 100vh;
+            color: #333;
+            padding: 20px;
+        }
+
+        .sectionconteudo img {
+            background-color: red;
+            position:sticky;
+            z-index: -1;
+        }
+
+        .linhasbox {
+            width: 100%;
+            position: fixed;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            z-index: -1;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 70%;
+        }
+        th, td {    
+            border: 2px solid #ff69b4;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #ff69b4;
+            color: white;
+        }
+        td {
+            background-color: #fff0f5;
+        }
+
+        /* Menu de navegação */
+        nav#menu {
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        nav#menu ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav#menu ul li {
+            margin: 0 10px;
+        }
+
+        nav#menu ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background 0.3s;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 1.0s ease;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            -webkit-box-shadow: 0px 0px 30px 0px rgba(255, 0, 170, 0.67);
+            -moz-box-shadow:    0px 0px 30px 0px rgba(255, 0, 212, 0.67);
+            box-shadow:         0px 0px 30px 0px rgba(255, 0, 242, 0.67);
+        }
+
+        nav#menu ul li a:hover {
+            background-color: #ff4081; /* Rosa quando o mouse passa */
+        }
+
+        /* Área de Comunidades */
+        #comunidades {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        #comunidades h2 {
+            color: #6200ea;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        #comunidades p {
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        button {
+            background-color: #ff4081;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #e91e63; /* Rosa mais escuro ao passar o mouse */
+        }
+
+        #form-comunidade {
+            margin-top: 20px;
+            background-color: #f8eaf6;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        #form-comunidade h3 {
+            color: #6200ea;
+            margin-bottom: 10px;
+        }
+
+        #form-comunidade label {
+            display: block;
+            margin: 5px 0;
+            font-weight: bold;
+            color: #333;
+        }
+
+        #form-comunidade input, #form-comunidade textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Lista de Comunidades */
+        #lista-comunidades {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #lista-comunidades li {
+            background-color: #e1bee7; /* Roxo claro */
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Chat */
+        #chat {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        #chat h2 {
+            color: #6200ea;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+        }
+
+        #chat-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #chat-box {
+            height: 200px;
+            overflow-y: auto;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        #chat-form {
+            display: flex;
+        }
+
+        #chat-form input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px 0 0 5px;
+        }
+
+        #chat-form button {
+            border-radius: 0 5px 5px 0;
+            background-color: #ff4081;
+        }
+
+        /* Área de Suporte */
+        #suporte {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #suporte h2 {
+            color: #6200ea;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+        }
+
+        .sectionfototer {
+            border-top: 1px solid #2f2f2f;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+            min-height: 10vh;
+            color: #333;
+            padding: 20px;
+        }
+
+        .sectionfototer footer {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+            min-height: 10vh;
+            color: #333;
+            padding: 20px;
+        }
+
+
+        .sectionfototer footer ul li a:hover {
+            transition: 0.2s;
+            color: #cacaca;
+            text-decoration: none;
+            color: #ffffff;
+            list-style: none;
+        }
+
+        .box-footer{
+            margin-right: 20px;
+        }
+
+        .box-footer img {
+            margin-right: 20px;
+        }
+
+        .sectionfototer {
+            border-top: 1px solid #2f2f2f;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+            min-height: 10vh;
+            color: #333;
+            margin-top: 90px;
+            background-color: #000000;
+        }
+
+        .sectionfototer footer {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+            min-height: 10vh;
+            color: #333;
+        }
+
+        .box-footer {
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            justify-content:  space-evenly;
+
+        }
+
+        .sectionfototer footer ul li a:hover {
+            transition: 0.2s;
+            color: #cacaca;
+        }
+
+        .sectionfototer img {
+            max-width: 20%;
+            display: flex;
+        }
+
+        .box-footer{
+            margin-right: 20px;
+        }
+
+        .box-footer h1 a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .linhasbox img {
+            padding: 10vh;
+            flex-basis: 30%;
+            opacity: 0.2;
+        }
+    </style>
+</head>
+<section class="sectionbody">
+    <section class="linhasbox">
+        <img src="images/linha-esquerda.svg" alt="">
+        <img src="images/linha-esquerda.svg" alt="">
+        <img src="images/linha-esquerda.svg" alt="">
+        <img class="sumirlinha" src="images/linha-esquerda.svg" alt="">
+        <img class="sumirlinha" src="images/linha-esquerda.svg" alt="">
+        <img class="sumirlinha" src="images/linha-esquerda.svg" alt="">
+    </section>
+    <body>
+            <!-- Cabeçalho -->
+            <header>
+                <a href="https://pride.google/" target="_blank"><img src="images/coracao.svg"></a>
+                <h1><a href="index.html">I N F O&nbsp;&nbsp;_&nbsp;&nbsp;P R I D E</a></h1>
+                <h3>Bem-vindo(a ) à Comunidade LGBT+</h3>
+            </header>
+
+            <!-- Menu de navegação -->
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html" target="_self">Página inicial</a></li>
+                    <li><a href="calendario.html" target="_self">Calendário</a></li>
+                    <li><a href="comunidade.html" target="_self">Comunidade</a></li>
+                    <li><a href="denuncias.html" target="_self">SAC</a></li>
+                </ul>
+            </nav>
+
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Evento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>25 de março</td>
+                        <td>Dia Nacional do Orgulho Gay</td>
+                    </tr>
+                    <tr>
+                        <td>17 de maio</td>
+                        <td>Dia Internacional Contra a Homofobia, Transfobia e Bifobia</td>
+                    </tr>
+                    <tr>
+                        <td>28 de junho</td>
+                        <td>Dia Internacional do Orgulho LGBT+</td>
+                    </tr>
+                    <tr>
+                        <td>29 de agosto</td>
+                        <td>Dia Nacional da Visibilidade Lésbica</td>
+                    </tr>
+                    <tr>
+                        <td>23 de setembro</td>
+                        <td>Dia da Visibilidade Bissexual</td>
+                    </tr>
+                    <tr>
+                        <td>26 de outubro</td>
+                        <td>Dia da Visibilidade Intersexo</td>
+                    </tr>
+                    <tr>
+                        <td>8 de novembro</td>
+                        <td>Dia da Solidariedade Intersexual</td>
+                    </tr>
+                    <tr>
+                        <td>20 de novembro</td>
+                        <td>Dia da Memória Trans (Transgender Day of Remembrance)</td>
+                    </tr>
+                    <tr>
+                        <td>1 de dezembro</td>
+                        <td>Dia Mundial de Luta Contra a AIDS</td>
+                    </tr>
+                </tbody>
+            </table>
+            <section class="sectionfototer">
+                <footer>
+                    <div class="box-footer">
+                        <h1><a href="index.html">I N F O&nbsp;&nbsp;_&nbsp;&nbsp;P R I D E</a></h1>
+                        <img id="imagefoter" src="images/diversidadefooter.jpg">
+                    </div>    
+                </footer>
+            </section>
+    
+        </body>
+    </section>
+
+        <!-- Scripts -->
+        <script>
+            document.getElementById('criar-comunidade-btn').addEventListener('click', function() {
+                const form = document.getElementById('form-comunidade');
+                form.style.display = form.style.display === 'none' ? 'block' : 'none';
+            });
+
+            document.getElementById('chat-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const mensagem = document.getElementById('mensagem').value;
+                const chatBox = document.getElementById('chat-box');
+
+                const novaMensagem = document.createElement('p');
+                novaMensagem.textContent = mensagem;
+                chatBox.appendChild(novaMensagem);
+
+                document.getElementById('mensagem').value = '';
+            });
+        </script>
+
+</html>

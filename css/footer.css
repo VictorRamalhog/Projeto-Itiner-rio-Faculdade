@@ -1,0 +1,25 @@
+footer {
+    display: flex;
+    background-color: #000;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    font-size: 0.5rem;
+    height: 10rem;
+    border-top: 0.5px solid #424242;
+  }
+  
+  li {
+    display: inline-block;
+    font-size: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+  
+  li:hover {
+    color: #929292;
+  }
+  
+  ul {
+    display: inline-block;
+  }
